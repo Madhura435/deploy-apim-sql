@@ -22,7 +22,7 @@ public class EmployeeController {
 
     @ApiOperation(value = "to return list of employees")
     @GetMapping(value = "employees")
-    private List<Employee> getAllEmployees() {
+    private List<Employee> getAllEmployees1() {
         return employeeRepository.findAll();
     }
 
