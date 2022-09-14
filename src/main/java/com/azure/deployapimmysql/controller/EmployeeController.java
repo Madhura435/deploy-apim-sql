@@ -40,8 +40,8 @@ public class EmployeeController {
 //    }
 
     @GetMapping(value = "employee")
-    private String getByEmployeeId(@RequestParam("eid") String eid) {
-        return "waste fellow madhura waste";
+    private String getByEmployeeId() {
+        return "waste fellow madhura waste waste";
     }
 
 
