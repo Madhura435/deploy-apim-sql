@@ -1,6 +1,6 @@
 Spring:
   datasource:
-    url: jdbc:sqlserver://madhura453.database.windows.net:1433;database=madhura453;encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;Authentication=ActiveDirectoryIntegrated
+    url: jdbc:sqlserver://madhura453.database.windows.net:1433;database=madhura453;user=madhura453@madhura453;password=gysjdwfB@799iS;encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;
     configuration:
       maximum-pool-size: 50
       connection-test-query: SELECT 1
