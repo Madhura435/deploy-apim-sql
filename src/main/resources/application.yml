@@ -17,3 +17,7 @@ Spring:
           batch_size: 4
           order_inserts: true
 
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+
