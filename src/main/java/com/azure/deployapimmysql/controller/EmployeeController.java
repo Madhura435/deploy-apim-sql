@@ -41,7 +41,7 @@ public class EmployeeController {
 
     @GetMapping(value = "text")
     private String getByEmployeeId() {
-        return "waste fellow madhura waste wasteee";
+        return "waste fellow madhura waste wasteeee";
     }
 
 
