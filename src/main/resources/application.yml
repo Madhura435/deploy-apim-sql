@@ -1,15 +1,6 @@
 Spring:
   datasource:
-    url: jdbc:sqlserver://madhura453.database.windows.net:1433;database=waste;user=madhura453@madhura453;password=gysjdwfB@799iS;encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;
-    configuration:
-      maximum-pool-size: 50
-      connection-test-query: SELECT 1
-      hikari:
-        data-source-properties:
-          useUnicode: true
-          characterEncoding: UTF-8
-      initialize: false
-
+    url: jdbc:sqlserver://madhu453.database.windows.net:1433;database=madhu;user=madhura453@madhu453;password=gysjdwfB@799iS;encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;
 
   jpa:
     show-sql: true
