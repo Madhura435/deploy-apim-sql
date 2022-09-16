@@ -39,7 +39,7 @@ public class EmployeeController {
         return new ResponseEntity<>(employee1, HttpStatus.OK);
     }
 
-    @GetMapping(value = "employee")
+    @GetMapping(value = "text")
     private String getByEmployeeId() {
         return "waste fellow madhura waste wasteee";
     }
