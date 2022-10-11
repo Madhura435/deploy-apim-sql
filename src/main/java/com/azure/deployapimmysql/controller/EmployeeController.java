@@ -51,7 +51,7 @@ public class EmployeeController {
     @GetMapping("/user-claims")
     public String home(HTTPRequest httpRequest)
     {
-        String n=httpRequest.getHeaderValue("X-MS-CLIENT-PRINCIPAL-NAME");
+        String n=httpRequest.getHeaderValue("X-MS-CLIENT-PRINCIPAL-NAME").toString();
         return n;
     }
 
