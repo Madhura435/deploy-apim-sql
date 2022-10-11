@@ -13,6 +13,9 @@ import org.springframework.security.oauth2.core.oidc.user.OidcUser;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.http.ResponseEntity;
 
+import javax.servlet.http.HttpServletRequest;
+import java.util.Enumeration;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -48,12 +51,19 @@ public class EmployeeController {
         return "waste fellow madhura waste wasteee";
     }
 
-    @GetMapping("/user-claims")
-    public String home(HTTPRequest httpRequest)
-    {
-        String n=httpRequest.getHeaderValue("X-MS-CLIENT-PRINCIPAL-NAME").toString();
-        return n;
-    }
+    @GetMapping("/group-claim")
+    private Map<String, String> getHeadersInfo(HttpServletRequest request) {
 
+        Map<String, String> map = new HashMap<String, String>();
+
+        Enumeration headerNames = request.getHeaderNames();
+        while (headerNames.hasMoreElements()) {
+            String key = (String) headerNames.nextElement();
+            String value = request.getHeader(key);
+            map.put(key, value);
+        }
+
+        return map;
+    }
 
 }
