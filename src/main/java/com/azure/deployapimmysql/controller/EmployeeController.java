@@ -45,7 +45,7 @@ public class EmployeeController {
 
     @GetMapping(value = "text")
     private String getByEmployeeId() {
-        return "waste fellow madhura waste wasteeeee";
+        return "waste fellow madhura waste wasteee";
     }
 
     @GetMapping("/group-claim")
