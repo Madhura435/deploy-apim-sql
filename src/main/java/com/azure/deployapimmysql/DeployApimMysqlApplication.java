@@ -12,4 +12,6 @@ public class DeployApimMysqlApplication {
 		SpringApplication.run(DeployApimMysqlApplication.class, args);
 	}
 
+	// In this project we are also doing azure App service with deployment. Here we are  in built Azure
+	// AD integration of app service.
 }
