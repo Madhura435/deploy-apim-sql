@@ -2,12 +2,12 @@ package com.azure.deployapimmysql.controller;
 
 import com.azure.deployapimmysql.model.Employee;
 import com.azure.deployapimmysql.repository.EmployeeRepository;
+import com.nimbusds.oauth2.sdk.http.HTTPRequest;
+import com.sun.net.httpserver.HttpContext;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.MediaType;
-import org.springframework.http.ResponseEntity;
+import org.springframework.http.*;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.security.oauth2.core.oidc.user.OidcUser;
 import org.springframework.web.bind.annotation.*;
@@ -48,15 +48,11 @@ public class EmployeeController {
         return "waste fellow madhura waste wasteee";
     }
 
-    @GetMapping("/group-claim")
-    public Map<String, Object> home(@AuthenticationPrincipal OidcUser principal)
+    @GetMapping("/user-claims")
+    public String home(HTTPRequest httpRequest)
     {
-        Map<String, Object> claims = principal.getIdToken().getClaims();
-        claims.entrySet().forEach(c->
-        {
-            System.out.println(c.getKey()+" madhura "+c.getValue().toString());
-        });
-        return claims;
+        String n=httpRequest.getHeaderValue("X-MS-CLIENT-PRINCIPAL-NAME");
+        return n;
     }
 
 
