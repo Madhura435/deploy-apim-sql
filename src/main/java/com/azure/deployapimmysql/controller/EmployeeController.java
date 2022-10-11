@@ -8,10 +8,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
+import org.springframework.security.oauth2.core.oidc.user.OidcUser;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.http.ResponseEntity;
 
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/madhura/alone")
@@ -43,6 +46,17 @@ public class EmployeeController {
     @GetMapping(value = "text")
     private String getByEmployeeId() {
         return "waste fellow madhura waste wasteeeee";
+    }
+
+    @GetMapping("/group-claim")
+    public Map<String, Object> home(@AuthenticationPrincipal OidcUser principal)
+    {
+        Map<String, Object> claims = principal.getIdToken().getClaims();
+        claims.entrySet().forEach(c->
+        {
+            System.out.println(c.getKey()+" madhura "+c.getValue().toString());
+        });
+        return claims;
     }
 
 

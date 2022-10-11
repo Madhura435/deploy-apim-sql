@@ -14,4 +14,5 @@ public class DeployApimMysqlApplication {
 
 	// In this project we are also doing azure App service with deployment. Here we are  in built Azure
 	// AD integration of app service.
+	// logout url for web app https://webapp-auth.azurewebsites.net/.auth/logout
 }
