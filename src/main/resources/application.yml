@@ -1,6 +1,11 @@
+azure:
+  webapp:
+    enabled: true
+
+
 Spring:
   datasource:
-    url: ${SQLAZURECONNSTR_connectionstring}
+    url: jdbc:sqlserver://moneycare.database.windows.net:1433;database=madhura;user=madhura@moneycare;password=gysjdwfB@799iS;encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;
   jpa:
     show-sql: true
     generate-ddl: true
@@ -24,3 +29,4 @@ Spring:
 
 
 
+conn: export ${SQLAZURECONNSTR_connectionstring}
