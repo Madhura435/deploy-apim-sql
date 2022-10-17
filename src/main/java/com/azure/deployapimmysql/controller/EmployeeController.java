@@ -8,6 +8,7 @@ import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.*;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.security.oauth2.core.oidc.user.OidcUser;
 import org.springframework.web.bind.annotation.*;
@@ -51,6 +52,8 @@ public class EmployeeController {
         return "waste fellow madhura waste wasteee";
     }
 
+
+    // https://learn.microsoft.com/en-us/azure/app-service/configure-authentication-user-identities implementation here
     @GetMapping("/group-claim")
     private Map<String, String> getHeadersInfo(HttpServletRequest request) {
 

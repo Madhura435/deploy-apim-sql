@@ -29,4 +29,6 @@ public class Employee implements Serializable {
 
     @Column(name="salary")
     private long salary;
+    
+    
 }
