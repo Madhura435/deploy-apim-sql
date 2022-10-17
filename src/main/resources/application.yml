@@ -1,6 +1,6 @@
 Spring:
   datasource:
-    url: System.getenv("url")
+    url: ${url}
   jpa:
     show-sql: true
     generate-ddl: true
