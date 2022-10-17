@@ -49,8 +49,8 @@ public class EmployeeController {
 
     @GetMapping(value = "text")
     private String getByEmployeeId() {
-        String envStr = System.getenv("APPSETTING_TestSetting");
-        return envStr;
+        String envStr = System.getenv("connectionstring");
+        return "ayyyo"+ envStr;
     }
 
 
