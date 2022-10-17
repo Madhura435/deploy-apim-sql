@@ -1,7 +1,3 @@
-azure:
-  webapp:
-    enabled: true
-
 Spring:
   datasource:
     url: ${SQLAZURECONNSTR_connectionstring}
