@@ -29,9 +29,6 @@ public class EmployeeController {
     @Autowired
     private EmployeeRepository employeeRepository;
 
-    @Value("${conn}")
-    private String conn;
-
     @ApiOperation(value = "to return list of employees")
     @GetMapping(value = "employees",produces = MediaType.APPLICATION_JSON_VALUE)
     private List<Employee> getAllEmployees1() {
@@ -54,7 +51,7 @@ public class EmployeeController {
     @GetMapping(value = "text")
     private String getByEmployeeId() {
         String envStr = System.getenv("SQLAZURECONNSTR_connectionstring");
-        return "ayyyo"+ envStr+"ayyo"+conn;
+        return "ayyyo"+ envStr;
     }
 
 

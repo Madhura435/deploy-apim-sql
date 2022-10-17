@@ -2,10 +2,9 @@ azure:
   webapp:
     enabled: true
 
-
 Spring:
   datasource:
-    url: jdbc:sqlserver://moneycare.database.windows.net:1433;database=madhura;user=madhura@moneycare;password=gysjdwfB@799iS;encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;
+    url: ${CUSTOMCONNSTR_connectionstring}
   jpa:
     show-sql: true
     generate-ddl: true
@@ -27,6 +26,3 @@ Spring:
     pathmatch:
       matching-strategy: ant_path_matcher
 
-
-
-conn: ${SQLAZURECONNSTR_connectionstring}
