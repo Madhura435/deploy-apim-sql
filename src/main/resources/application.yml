@@ -29,4 +29,4 @@ Spring:
 
 
 
-conn: export ${SQLAZURECONNSTR_connectionstring}
+conn: ${SQLAZURECONNSTR_connectionstring}
