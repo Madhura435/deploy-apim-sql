@@ -7,6 +7,7 @@ import com.sun.net.httpserver.HttpContext;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.*;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
@@ -27,6 +28,9 @@ public class EmployeeController {
 
     @Autowired
     private EmployeeRepository employeeRepository;
+
+    @Value("${conn}")
+    private String conn;
 
     @ApiOperation(value = "to return list of employees")
     @GetMapping(value = "employees",produces = MediaType.APPLICATION_JSON_VALUE)
@@ -50,7 +54,7 @@ public class EmployeeController {
     @GetMapping(value = "text")
     private String getByEmployeeId() {
         String envStr = System.getenv("connectionstring");
-        return "ayyyo"+ envStr;
+        return "ayyyo"+ envStr+"ayyo"+conn;
     }
 
 
