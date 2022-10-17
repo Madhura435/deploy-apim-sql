@@ -1,6 +1,6 @@
 Spring:
   datasource:
-    url: ${url}
+    url: ${connectionstring}
   jpa:
     show-sql: true
     generate-ddl: true
