@@ -4,7 +4,7 @@ azure:
 
 Spring:
   datasource:
-    url: ${CUSTOMCONNSTR_connectionstring}
+    url: ${SQLAZURECONNSTR_connectionstring}
   jpa:
     show-sql: true
     generate-ddl: true
